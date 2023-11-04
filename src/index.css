@@ -8,7 +8,7 @@
 /* Nunito Regular */
 @layer components {
     .link {
-        @apply text-white;
+        @apply font-thin;
     }
 
     .section-title {
