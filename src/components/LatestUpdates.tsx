@@ -1,4 +1,4 @@
-import { Bounce } from "react-awesome-reveal";
+import { Slide } from "react-awesome-reveal";
 type LatestUpdates = {
     photo: any;
     description: String;
@@ -7,8 +7,8 @@ type LatestUpdates = {
 }
 const LatestUpdates = ({ photo, description, delay }: LatestUpdates) => {
     return (
-        <Bounce delay={delay} triggerOnce={true}>
-            <div className='flex flex-col border border-gray-200 rounded-sm'>
+        <Slide delay={delay} triggerOnce={true} direction={'up'}>
+            <div className='flex flex-col border border-gray-200 rounded-sm z-40'>
                 <div>
                     <img src={photo} alt="" className='h-[15em] w-full rounded-sm' />
                 </div>
@@ -19,7 +19,7 @@ const LatestUpdates = ({ photo, description, delay }: LatestUpdates) => {
                     <button type="button" className="hover-button border border-sky-600 px-3 py-2 text-sky-600 rounded-sm">READ MORE</button>
                 </div>
             </div>
-        </Bounce>
+        </Slide>
 
     )
 }

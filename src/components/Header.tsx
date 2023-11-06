@@ -12,8 +12,8 @@ const Header = () => {
         <ul className="flex space-x-4 text-lg">
           <li><Link to="/" className={linkColor+' link'}>HOME </Link></li>
           <li><Link to="/beaches" className={linkColor+' link'}>BEACHES</Link></li>
-          <li><a href="/landmarks" className={linkColor+' link'}>LANDMARKS</a></li>
-          <li><a href="/events" className={linkColor+' link'}>EVENTS</a></li>
+          <li><Link to="/landmarks" className={linkColor+' link'}>LANDMARKS</Link></li>
+          <li><Link to="/events" className={linkColor+' link'}>EVENTS</Link></li>
         </ul>
       </div>
     </nav>
