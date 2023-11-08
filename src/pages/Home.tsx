@@ -5,11 +5,8 @@ import kalanggaman from '../assets/KALANGGAMAN.jpg';
 import DestinationCard from '../components/DestinationCard';
 import LatestUpdates from '../components/LatestUpdates';
 import mainpicture from '../assets/mainpicture.png';
-// import beach from '../assets/beach.jpg'
-import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
-import { FaXTwitter } from 'react-icons/fa6';
-import { Link } from 'react-router-dom';
-import logoWhite from '../assets/visit-leyte-white.png';
+
+
 import { Slide } from 'react-awesome-reveal'
 const Home = () => {
     return (
@@ -34,14 +31,16 @@ const Home = () => {
             </div>
             <div className='grid grid-cols-2 items-center w-full mt-24 px-20 gap-8'>
                 <div className="md:col-span-1 col-span-2">
-                    <Slide direction={'left'} delay={200} triggerOnce={true} className='relative  flex flex-col items-center justify-center'>
-                        <p className='text-3xl text-sky-600'>BEACHES</p>
-                        <p className='mt-3 text-lg text-center'>Discover the beauty of our pristine beaches, where golden sands meet crystal-clear waters for an unforgettable experience</p>
-                        <button type='button' className='hover-button mt-4 px-6 py-2 rounded-sm border border-sky-600 text-sky-600'>EXPLORE</button>
+                    <Slide direction={'left'}  triggerOnce={true}>
+                        <div className='relative  flex flex-col items-center justify-center'>
+                            <p className='text-3xl text-sky-600'>BEACHES</p>
+                            <p className='mt-3 text-lg text-center'>Discover the beauty of our pristine beaches, where golden sands meet crystal-clear waters for an unforgettable experience</p>
+                            <button type='button' className='hover-button mt-4 px-6 py-2 rounded-sm border border-sky-600 text-sky-600'>EXPLORE</button>
+                        </div>
                     </Slide>
                 </div>
                 <div className="md:col-span-1 col-span-2">
-                    <Slide direction={'right'} delay={200} triggerOnce={true}>
+                    <Slide direction={'right'}  triggerOnce={true}>
                         <img src={whytravel} alt="" className='w-full h-[20em] rounded-sm' />
                     </Slide>
 
@@ -49,15 +48,17 @@ const Home = () => {
             </div>
             <div className='grid grid-cols-2 items-center w-full mt-16 px-20 gap-8'>
                 <div className="md:col-span-1 col-span-2">
-                    <Slide direction={'left'} delay={200} triggerOnce={true}>
+                    <Slide direction={'left'}triggerOnce={true}>
                         <img src={whytravel} alt="" className='w-full h-[20em] rounded-sm' />
                     </Slide>
                 </div>
                 <div className="md:col-span-1 col-span-2">
-                    <Slide direction={'right'} delay={200} triggerOnce={true} className='relative flex flex-col items-center justify-center'>
-                        <p className='text-3xl text-sky-600'>LANDMARKS</p>
-                        <p className='mt-3 text-lg text-center'>Join us in exploring our remarkable landmarks, each a testament to history and culture, offering unforgettable experiences for all who visit.</p>
-                        <button type='button' className='hover-button mt-4 px-6 py-2 rounded-sm border border-sky-600 text-sky-600'>EXPLORE</button>
+                    <Slide direction={'right'} triggerOnce={true}>
+                        <div className='relative flex flex-col items-center justify-center'>
+                            <p className='text-3xl text-sky-600'>LANDMARKS</p>
+                            <p className='mt-3 text-lg text-center'>Join us in exploring our remarkable landmarks, each a testament to history and culture, offering unforgettable experiences for all who visit.</p>
+                            <button type='button' className='hover-button mt-4 px-6 py-2 rounded-sm border border-sky-600 text-sky-600'>EXPLORE</button>
+                        </div>
                     </Slide>
                 </div>
             </div>
@@ -88,41 +89,7 @@ const Home = () => {
                     </div>
                 </form>
             </div> */}
-            <div className='px-6 pb-6 pt-4 bg-sky-600'>
-                <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 p-4'>
-                    <div className="col-span-1 ">
-                        <img src={logoWhite} alt="San Juanico Bridge" className='w-fit h-fit' />
-                    </div>
-                    <div className="col-span-1 mt-3">
-                        <ul className='space-y-3 text-white'>
-                            <li><Link to={'/'}>Maps</Link></li>
-                            <li><Link to={'/'}>Partnerships</Link></li>
-                            <li><Link to={'/'}>Destinations</Link></li>
-                            <li><Link to={'/'}>Blog</Link></li>
-                        </ul>
-                    </div>
-                    <div className="col-span-1 mt-3">
-                        <ul className='space-y-3 text-white'>
-                            <li><Link to={'/'}>About Us</Link></li>
-                            <li><Link to={'/'}>Terms and Conditions</Link></li>
-                            <li><Link to={'/'}>Privacy Policy</Link></li>
-                        </ul>
-                    </div>
-                    <div className="col-span-1 space-y-3 text-white mt-3">
-                        <button type='button' className='border border-white w-full rounded-sm py-2'>CONTACT US</button>
-                        <p>+639516728910</p>
-                        <p>visitleyte@tourism.com</p>
-                    </div>
-                </div>
-                <hr className="my-8 bg-white opacity-50 border-1"></hr>
-                <div className='flex justify-center items-center gap-3'>
-                    <FaFacebook size={30} color="white" />
-                    <FaInstagram size={30} color="white" />
-                    <FaXTwitter size={30} color="white" />
-                    <FaYoutube size={37} color="white" />
-                </div>
-                <p className='text-white text-center mt-4'>@ Copyright 2023 All rights reserved </p>
-            </div>
+            
         </>
     )
 }

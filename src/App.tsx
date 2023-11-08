@@ -1,5 +1,6 @@
 import './App.css'
-import Header from './components/Header.tsx'
+import Header from './components/Header'
+import Footer from './components/Footer';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './pages/Home.tsx';
 import Beaches from './pages/Beaches.tsx';
@@ -9,7 +10,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Header></Header>
+        <Header/>
         <Routes>
           <Route path="/" element={<Home />}>
           </Route>
@@ -17,6 +18,7 @@ function App() {
           <Route path='/landmarks' element={<Landmarks />}></Route>
           <Route path='/events' element={<Events />}></Route>
         </Routes>
+        <Footer/>
       </BrowserRouter>
     </>
   )
