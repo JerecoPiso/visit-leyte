@@ -4,7 +4,7 @@ import mcarthur from '../assets/MCARTHUR.jpg';
 import kalanggaman from '../assets/KALANGGAMAN.jpg';
 import DestinationCard from '../components/DestinationCard';
 import LatestUpdates from '../components/LatestUpdates';
-import mainpicture from '../assets/mainpicture.png';
+import mainpicture from '../assets/island3.jpg';
 
 
 import { Slide } from 'react-awesome-reveal'
