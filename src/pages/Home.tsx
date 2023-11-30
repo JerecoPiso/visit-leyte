@@ -17,7 +17,7 @@ const Home = () => {
             <div className='mb-8 '>
                 <p className='section-title'>TOP DESTINATION</p>
                 <hr className="w-12 h-[0.4em] mx-auto mt-4 bg-gray-300 border-0 rounded"></hr>
-                <div className='flex flex-wrap justify-center w-full max-h-auto mt-16 px-20 gap-8 min-h-[20em]'>
+                <div className='flex flex-wrap justify-center w-full max-h-auto mt-16 lg:px-20 md:px-14 px-4 gap-8 min-h-[20em]'>
                     <div className='md:flex-1'>
                         <DestinationCard name={"McArthur Park"} delay={300} photo={mcarthur} place={"Brgy. Candahug Palo Leyte"} />
                     </div>
@@ -29,7 +29,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className='grid grid-cols-2 items-center w-full mt-24 px-20 gap-8'>
+            <div className='grid grid-cols-2 items-center w-full mt-24 lg:px-20 md:px-14 px-4 gap-8'>
                 <div className="md:col-span-1 col-span-2">
                     <Slide direction={'left'}  triggerOnce={true}>
                         <div className='relative  flex flex-col items-center justify-center'>
@@ -46,7 +46,7 @@ const Home = () => {
 
                 </div>
             </div>
-            <div className='grid grid-cols-2 items-center w-full mt-16 px-20 gap-8'>
+            <div className='grid grid-cols-2 items-center w-full mt-16 lg:px-20 md:px-14 px-4 gap-8'>
                 <div className="md:col-span-1 col-span-2">
                     <Slide direction={'left'}triggerOnce={true}>
                         <img src={whytravel} alt="" className='w-full h-[20em] rounded-sm' />
@@ -65,7 +65,7 @@ const Home = () => {
             <div>
                 <p className='section-title'>LATEST UPDATES</p>
                 <hr className="w-12 h-[0.4em] mx-auto mt-4 bg-gray-300 border-0 rounded"></hr>
-                <div className='flex flex-wrap justify-center w-full max-h-auto mt-16 mb-8 px-20 gap-8 min-h-[20em]'>
+                <div className='flex flex-wrap justify-center w-full max-h-auto mt-16 mb-8 lg:px-20 md:px-14 px-4 gap-8 min-h-[20em]'>
                     <div className="md:flex-1">
                         <LatestUpdates photo={mcarthur} delay={300} description={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla nihil voluptas reprehenderit asperiores sunt quo labore, sequi obcaecati accusamus. Mollitia culpa architecto, corrupti deleniti ex fugiat quia accusamus cupiditate fugit."} />
                     </div>

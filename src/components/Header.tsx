@@ -25,8 +25,8 @@ const Header = () => {
   }, [])
   return (
     <nav className={`flex justify-between items-center py-1 px-[3em] h-20 fixed top-0 w-full z-20 ${scrolled ? 'bg-white/70 border-b border-sky-100' : ''}`}>
-      <div>
-        <img src={logo} alt="Visit Leyte" />
+      <div className="md:block hidden">
+        <img src={logo} alt="Visit Leyte " />
       </div>
       <div className="md:block hidden">
         <ul className="flex space-x-4 text-lg">
