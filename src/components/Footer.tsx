@@ -32,10 +32,10 @@ const Footer = () => {
             </div>
             <hr className="my-8 bg-white opacity-50 border-1"></hr>
             <div className='flex justify-center items-center gap-3'>
-                <FaFacebook size={30} color="white" />
-                <FaInstagram size={30} color="white" />
+                <FaFacebook size={32} color="white" />
+                <FaInstagram size={32} color="white" />
                 <FaXTwitter size={30} color="white" />
-                <FaYoutube size={37} color="white" />
+                <FaYoutube size={36} color="white" />
             </div>
             <p className='text-white text-center mt-4'>@ Copyright 2023 All rights reserved </p>
         </div>

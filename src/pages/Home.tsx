@@ -6,7 +6,6 @@ import DestinationCard from '../components/DestinationCard';
 import LatestUpdates from '../components/LatestUpdates';
 import mainpicture from '../assets/island3.jpg';
 
-
 import { Slide } from 'react-awesome-reveal'
 const Home = () => {
     return (
@@ -17,7 +16,7 @@ const Home = () => {
             <div className='mb-8 '>
                 <p className='section-title'>TOP DESTINATION</p>
                 <hr className="w-12 h-[0.4em] mx-auto mt-4 bg-gray-300 border-0 rounded"></hr>
-                <div className='flex flex-wrap justify-center w-full max-h-auto mt-16 lg:px-20 md:px-14 px-4 gap-8 min-h-[20em]'>
+                <div className='flex flex-wrap justify-center w-full max-h-auto mt-16 lg:px-20 md:px-14 px-4 gap-8 min-h-[22em]'>
                     <div className='md:flex-1'>
                         <DestinationCard name={"McArthur Park"} delay={300} photo={mcarthur} place={"Brgy. Candahug Palo Leyte"} />
                     </div>
