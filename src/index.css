@@ -6,7 +6,7 @@
 /* Nunito Regular */
 @layer components {
     .link {
-        @apply font-thin;
+        @apply font-thin text-base;
     }
 
     .section-title {
