@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import logo from '../assets/visitleyte.png';
+import logoWhite from '../assets/visit-leyte-white.png';
 import { useEffect, useState } from 'react'
 const Header = () => {
   const path = useLocation()
@@ -24,9 +25,9 @@ const Header = () => {
     };
   }, [])
   return (
-    <nav className={`flex justify-between items-center py-1 px-[3em] h-20 fixed top-0 w-full z-20 ${scrolled ? 'bg-white/70 border-b border-sky-100' : ''}`}>
+    <nav className={`z-30 flex justify-between items-center py-1 px-[3em] h-20 fixed top-0 w-full ${scrolled ? 'bg-white/70 border-b border-sky-100' : ''}`}>
       <div className="md:block hidden">
-        <img src={logo} alt="Visit Leyte " />
+        <img src={scrolled || currentPath != '/' ? logo : logoWhite} alt="Visit Leyte " />
       </div>
       <div className="md:block hidden">
         <ul className="flex space-x-4 text-lg">
@@ -34,6 +35,7 @@ const Header = () => {
           <li><Link to="/beaches" className={`${currentPath === "/" && scrollY <= 50 ? "text-white" : "text-sky-700"} link`}>BEACHES</Link></li>
           <li><Link to="/landmarks" className={`${currentPath === "/" && scrollY <= 50 ? "text-white" : "text-sky-700"} link`}>LANDMARKS</Link></li>
           <li><Link to="/events" className={`${currentPath === "/" && scrollY <= 50 ? "text-white" : "text-sky-700"} link`}>EVENTS</Link></li>
+          <li><Link to="/blog" className={`${currentPath === "/" && scrollY <= 50 ? "text-white" : "text-sky-700"} link`}>BLOG</Link></li>
         </ul>
       </div>
     </nav>

@@ -17,9 +17,9 @@ const EventCard = () => {
       </div>
       <div className='flex flex-col-reverse items-center absolute h-full w-full bg-gradient-to-b rounded-md from-gray-800 via-transparent to-gray-800'>
         <div className='bottom-0 pl-4 py-4 group-hover:bg-white/20 w-full'>
-          <p className='text-white group-hover:text-slate-900 text-center text-base group-hover:text-xl'>79TH LEYTE GULF LANDING</p>
+          <p className='text-white  text-center text-base group-hover:text-xl'>79TH LEYTE GULF LANDING</p>
           <Slide direction={'up'} triggerOnce={true} className='hidden group-hover:block text-center'>
-            <p className='text-sm text-slate-900'>Palo, Leyte</p>
+            <p className='text-sm text-slate-200'>Palo, Leyte</p>
           </Slide>
         </div>
       </div>

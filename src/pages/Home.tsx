@@ -6,11 +6,27 @@ import DestinationCard from '../components/DestinationCard';
 import LatestUpdates from '../components/LatestUpdates';
 import mainpicture from '../assets/island3.jpg';
 
-import { Slide } from 'react-awesome-reveal'
+import { Fade, Slide } from 'react-awesome-reveal'
 const Home = () => {
     return (
         <>
-            <div>
+            <div className='relative h-[85vh]'>
+                <div className='absolute w-full bg-black/30 left-0 h-full z-10'>
+           
+                </div>
+                <div className='z-20 flex absolute md:items-start items-center md:justify-start justify-center w-full h-full md:ml-10 ml-0'>
+                    <div className=' text-slate-100 md:text-start text-center md:text-5xl text-3xl font-semibold md:mt-[4.5em] mt-0 space-y-4 p-3'>
+                        <Fade cascade triggerOnce={true}>
+                            <Fade cascade triggerOnce={true} duration={100} delay={100}>Discover Leyte </Fade>
+                            <Fade cascade triggerOnce={true} duration={100} delay={300}>Where Adventure Meets Tranquility</Fade>
+                        </Fade>
+                        <Fade cascade triggerOnce={true} duration={100} delay={2000}>
+                            <button className="text-base relative flex h-[50px] w-40 items-center justify-center overflow-hidden bg-slate-100/10 text-white shadow-2xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-slate-100 hover:text-sky-600 before:duration-500 before:ease-out  hover:before:h-56 hover:before:w-56">
+                                <span className="relative z-10">EXPLORE</span>
+                            </button>
+                        </Fade>
+                    </div>
+                </div>
                 <img src={mainpicture} alt="San Juanico Bridge" className='h-[85vh] w-full' />
             </div>
             <div className='mb-8 '>
@@ -30,7 +46,7 @@ const Home = () => {
             </div>
             <div className='grid grid-cols-2 items-center w-full mt-24 lg:px-20 md:px-14 px-4 gap-8'>
                 <div className="md:col-span-1 col-span-2">
-                    <Slide direction={'left'}  triggerOnce={true}>
+                    <Slide direction={'left'} triggerOnce={true}>
                         <div className='relative  flex flex-col items-center justify-center'>
                             <p className='text-3xl text-sky-600'>BEACHES</p>
                             <p className='mt-3 text-lg text-center'>Discover the beauty of our pristine beaches, where golden sands meet crystal-clear waters for an unforgettable experience</p>
@@ -39,15 +55,14 @@ const Home = () => {
                     </Slide>
                 </div>
                 <div className="md:col-span-1 col-span-2">
-                    <Slide direction={'right'}  triggerOnce={true}>
+                    <Slide direction={'right'} triggerOnce={true}>
                         <img src={whytravel} alt="" className='w-full h-[20em] rounded-sm' />
                     </Slide>
-
                 </div>
             </div>
             <div className='grid grid-cols-2 items-center w-full mt-16 lg:px-20 md:px-14 px-4 gap-8'>
                 <div className="md:col-span-1 col-span-2">
-                    <Slide direction={'left'}triggerOnce={true}>
+                    <Slide direction={'left'} triggerOnce={true}>
                         <img src={whytravel} alt="" className='w-full h-[20em] rounded-sm' />
                     </Slide>
                 </div>
@@ -88,7 +103,7 @@ const Home = () => {
                     </div>
                 </form>
             </div> */}
-            
+
         </>
     )
 }
