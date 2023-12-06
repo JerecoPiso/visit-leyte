@@ -12,18 +12,21 @@ const Home = () => {
         <>
             <div className='relative h-[85vh]'>
                 <div className='absolute w-full bg-black/30 left-0 h-full z-10'>
-           
+
                 </div>
-                <div className='z-20 flex absolute md:items-start items-center md:justify-start justify-center w-full h-full md:ml-10 ml-0'>
-                    <div className=' text-slate-100 md:text-start text-center md:text-5xl text-3xl font-semibold md:mt-[4.5em] mt-0 space-y-4 p-3'>
+                <div className='z-20  flex absolute items-center justify-center md:justify-start w-full h-full md:ml-10 ml-0'>
+                    <div className='text-slate-100 md:text-start  text-center md:text-5xl text-3xl font-semibold space-y-4 p-3'>
                         <Fade cascade triggerOnce={true}>
                             <Fade cascade triggerOnce={true} duration={100} delay={100}>Discover Leyte </Fade>
                             <Fade cascade triggerOnce={true} duration={100} delay={300}>Where Adventure Meets Tranquility</Fade>
                         </Fade>
                         <Fade cascade triggerOnce={true} duration={100} delay={2000}>
-                            <button className="text-base relative flex h-[50px] w-40 items-center justify-center overflow-hidden bg-slate-100/10 text-white shadow-2xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-slate-100 hover:text-sky-600 before:duration-500 before:ease-out  hover:before:h-56 hover:before:w-56">
-                                <span className="relative z-10">EXPLORE</span>
-                            </button>
+                            <div className='flex md:justify-start justify-center'>
+                                <button className="text-base relative flex h-[50px] w-40 items-center justify-center overflow-hidden bg-slate-100/10 text-white shadow-2xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-slate-100 hover:text-sky-600 before:duration-500 before:ease-out  hover:before:h-56 hover:before:w-56">
+                                    <span className="relative z-10">EXPLORE</span>
+                                </button>
+                            </div>
+
                         </Fade>
                     </div>
                 </div>
