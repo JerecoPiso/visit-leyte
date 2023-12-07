@@ -15,7 +15,7 @@ const Home = () => {
 
                 </div>
                 <div className='z-20  flex absolute items-center justify-center md:justify-start w-full h-full md:ml-10 ml-0'>
-                    <div className='text-slate-100 md:text-start  text-center md:text-5xl text-3xl font-semibold space-y-4 p-3'>
+                    <div className='text-slate-100 md:text-start  text-center md:text-5xl text-2xl font-semibold space-y-4 p-3'>
                         <Fade cascade triggerOnce={true}>
                             <Fade cascade triggerOnce={true} duration={100} delay={100}>Discover Leyte </Fade>
                             <Fade cascade triggerOnce={true} duration={100} delay={300}>Where Adventure Meets Tranquility</Fade>
@@ -34,7 +34,7 @@ const Home = () => {
             </div>
             <div className='mb-8 '>
                 <p className='section-title'>TOP DESTINATION</p>
-                <hr className="w-12 h-[0.4em] mx-auto mt-4 bg-gray-300 border-0 rounded"></hr>
+                <hr className="w-12 h-[0.4em] mx-auto mt-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded"></hr>
                 <div className='flex flex-wrap justify-center w-full max-h-auto mt-16 lg:px-20 md:px-14 px-4 gap-8 min-h-[22em]'>
                     <div className='md:flex-1'>
                         <DestinationCard name={"McArthur Park"} delay={300} photo={mcarthur} place={"Brgy. Candahug Palo Leyte"} />
@@ -81,16 +81,16 @@ const Home = () => {
             </div>
             <div>
                 <p className='section-title'>LATEST UPDATES</p>
-                <hr className="w-12 h-[0.4em] mx-auto mt-4 bg-gray-300 border-0 rounded"></hr>
+                <hr className="w-12 h-[0.4em] mx-auto mt-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded"></hr>
                 <div className='flex flex-wrap justify-center w-full max-h-auto mt-16 mb-8 lg:px-20 md:px-14 px-4 gap-8 min-h-[20em]'>
                     <div className="md:flex-1">
-                        <LatestUpdates photo={mcarthur} delay={300} description={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla nihil voluptas reprehenderit asperiores sunt quo labore, sequi obcaecati accusamus. Mollitia culpa architecto, corrupti deleniti ex fugiat quia accusamus cupiditate fugit."} />
+                        <LatestUpdates title={'Leyte Gulf Landing'} photo={mcarthur} delay={300} description={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla nihil voluptas reprehenderit asperiores sunt quo labore, sequi obcaecati accusamus."} />
                     </div>
                     <div className="md:flex-1">
-                        <LatestUpdates photo={mcarthur} delay={500} description={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla nihil voluptas reprehenderit asperiores sunt quo labore, sequi obcaecati accusamus. Mollitia culpa architecto, corrupti deleniti ex fugiat quia accusamus cupiditate fugit."} />
+                        <LatestUpdates title={'Leyte Gulf Landing'} photo={mcarthur} delay={500} description={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla nihil voluptas reprehenderit asperiores sunt quo labore, sequi obcaecati accusamus."} />
                     </div>
                     <div className="md:flex-1">
-                        <LatestUpdates photo={mcarthur} delay={700} description={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla nihil voluptas reprehenderit asperiores sunt quo labore, sequi obcaecati accusamus. Mollitia culpa architecto, corrupti deleniti ex fugiat quia accusamus cupiditate fugit."} />
+                        <LatestUpdates title={'Leyte Gulf Landing'} photo={mcarthur} delay={700} description={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla nihil voluptas reprehenderit asperiores sunt quo labore, sequi obcaecati accusamus."} />
                     </div>
                 </div>
             </div>

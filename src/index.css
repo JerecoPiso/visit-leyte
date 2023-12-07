@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400&display=swap'); */
+@import url("https://fonts.googleapis.com/css?family=Poppins");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 /* Nunito Regular */
 @layer components {
     .link {
@@ -10,7 +10,7 @@
     }
 
     .section-title {
-        @apply text-center text-3xl text-sky-600 mt-16 font-semibold;
+        @apply text-center text-4xl text-slate-700 mt-16 font-semibold;
     }
 
     .hover-button:hover{
@@ -18,7 +18,7 @@
     }
 }
 * {
-    font-family: 'Nunito';
+    font-family: 'Poppins';
 }
 
 body::-webkit-scrollbar {

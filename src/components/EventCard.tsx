@@ -13,7 +13,6 @@ const EventCard = () => {
           <p className='text-2xl text-white'>20</p>
           <p className='-mt-1 text-white'>OCT</p>
         </Rotate>
-
       </div>
       <div className='flex flex-col-reverse items-center absolute h-full w-full bg-gradient-to-b rounded-md from-gray-800 via-transparent to-gray-800'>
         <div className='bottom-0 pl-4 py-4 group-hover:bg-white/20 w-full'>
