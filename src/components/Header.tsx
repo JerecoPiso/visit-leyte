@@ -10,7 +10,7 @@ const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY >= 50) {
-        if(currentPath === "/"){
+        if (currentPath === "/") {
           setScrollY(51)
         }
         setScrolled(true);
@@ -31,7 +31,7 @@ const Header = () => {
       </div>
       <div className="md:block hidden">
         <ul className="flex space-x-4 text-lg">
-           <li><Link to="/" className={`${currentPath === "/" && scrollY <= 50 ? "text-white" : "text-sky-700"} link`}>HOME </Link></li>
+          <li><Link to="/" className={`${currentPath === "/" && scrollY <= 50 ? "text-white" : "text-sky-700"} link`}>HOME </Link></li>
           <li><Link to="/beaches" className={`${currentPath === "/" && scrollY <= 50 ? "text-white" : "text-sky-700"} link`}>BEACHES</Link></li>
           <li><Link to="/landmarks" className={`${currentPath === "/" && scrollY <= 50 ? "text-white" : "text-sky-700"} link`}>LANDMARKS</Link></li>
           <li><Link to="/events" className={`${currentPath === "/" && scrollY <= 50 ? "text-white" : "text-sky-700"} link`}>EVENTS</Link></li>

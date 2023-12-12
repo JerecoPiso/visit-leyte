@@ -15,7 +15,7 @@ const Home = () => {
 
                 </div>
                 <div className='z-20  flex absolute items-center justify-center md:justify-start w-full h-full md:ml-10 ml-0'>
-                    <div className='text-slate-100 md:text-start  text-center md:text-5xl text-2xl font-semibold space-y-4 p-3'>
+                    <div className='text-slate-100 md:text-start text-center md:text-5xl text-3xl font-semibold space-y-4 p-3'>
                         <Fade cascade triggerOnce={true}>
                             <Fade cascade triggerOnce={true} duration={100} delay={100}>Discover Leyte </Fade>
                             <Fade cascade triggerOnce={true} duration={100} delay={300}>Where Adventure Meets Tranquility</Fade>
