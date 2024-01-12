@@ -6,7 +6,7 @@ type BeachesInfo = {
 }
 const BeachesCard = ({ name, photo }: BeachesInfo) => {
     return (
-        <div className="group group-hover hover:shadow-2xl rounded-md h-full md:w-[20em] sm:w-full ">
+        <div className="group group-hover hover:shadow-2xl rounded-md h-full md:w-[20em] w-full ">
             <div className="flex flex-col shadow-2xl h-auto rounded-md">
                 <div className="relative overflow-hidden rounded-md">
                     <div className="absolute bg-black-opacity  rounded-md h-full w-full flex flex-col-reverse z-20">

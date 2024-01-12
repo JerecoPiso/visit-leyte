@@ -1,4 +1,4 @@
-import BeachesCard from "../components/BeachesCard"
+import BeachesCard from "../components/BeachesCard";
 import mainpicture from '../assets/island3.jpg';
 
 const Beaches = () => {
@@ -11,7 +11,7 @@ const Beaches = () => {
                 </span>
             </p> */}
             <p className="text-center uppercase font-semibold text-4xl text-slate-700">Beaches TO Visit</p>
-            <hr className="w-12 h-[0.4em] mx-auto mt-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full"></hr>
+            <hr className="w-24 h-[0.7em] mx-auto mt-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full"></hr>
             <div className="flex flex-wrap justify-center w-full mt-12 gap-8 lg:px-12 md:px-8 px-4 mb-16">
                 <div className="md:w-auto w-full">
                     <BeachesCard name={"KALANGGAMAN ISLAND"} photo={mainpicture} description={desc} />

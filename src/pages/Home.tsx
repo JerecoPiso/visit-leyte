@@ -1,5 +1,6 @@
 import sanjuanico from '../assets/San_Juanico_Bridge.jpg';
 import whytravel from '../assets/WHYTRAVEL.png';
+import landmarks from '../assets/landmarks.jpg';
 import mcarthur from '../assets/MCARTHUR.jpg';
 import kalanggaman from '../assets/KALANGGAMAN.jpg';
 import DestinationCard from '../components/DestinationCard';
@@ -66,7 +67,7 @@ const Home = () => {
             <div className='grid grid-cols-2 items-center w-full mt-16 lg:px-20 md:px-14 px-4 gap-8'>
                 <div className="md:col-span-1 col-span-2">
                     <Slide direction={'left'} triggerOnce={true}>
-                        <img src={whytravel} alt="" className='w-full h-[20em] rounded-sm' />
+                        <img src={landmarks} alt="" className='w-full h-[20em] rounded-sm' />
                     </Slide>
                 </div>
                 <div className="md:col-span-1 col-span-2">

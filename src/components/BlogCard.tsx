@@ -3,7 +3,7 @@ type BlogInfo = {
 }
 const BlogCard = ({ title }: BlogInfo) => {
   return (
-    <div className=""><p className="text-white text-4xl ">{title}</p></div>
+    <div className=""><p className="text-4xl ">{title}</p></div>
   )
 }
 

@@ -6,17 +6,19 @@
 /* Nunito Regular */
 @layer components {
     .link {
-        @apply font-thin text-base;
+        @apply font-thin text-base flex;
     }
-
-    .section-title {
-        @apply text-center text-4xl text-slate-700 mt-16 font-semibold;
-    }
-
     .hover-button:hover{
         @apply bg-sky-100 transition duration-500
     }
 }
+    .section-title {
+        @apply text-center text-4xl text-slate-700 mt-16 font-semibold;
+    }
+    .tags {
+        @apply bg-slate-300 text-slate-800 px-3 py-1 rounded-full text-sm hover:bg-slate-800 hover:text-slate-300
+    }
+    
 * {
     font-family: 'Poppins';
 }

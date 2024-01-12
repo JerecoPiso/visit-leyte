@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import logoWhite from '../assets/visit-leyte-white.png';
 const Footer = () => {
     return (
-        <div className='md:px-6 px-2 pb-6 pt-4 bg-slate-800'>
-            <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 p-4'>
+        <div className='md:px-[3em] px-2 pb-6 pt-4 bg-slate-800'>
+            <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 py-4'>
                 <div className="col-span-1 ">
                     <img src={logoWhite} alt="San Juanico Bridge" className='w-fit h-fit md:ml-4 ml-0' />
                 </div>
