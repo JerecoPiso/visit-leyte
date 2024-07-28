@@ -6,20 +6,29 @@ import kalanggaman from '../assets/KALANGGAMAN.jpg';
 import DestinationCard from '../components/DestinationCard';
 import LatestUpdates from '../components/LatestUpdates';
 import mainpicture from '../assets/island3.jpg';
-
+import { useEffect, useState } from 'react'
 import { Fade, Slide } from 'react-awesome-reveal'
 const Home = () => {
+    const [size, setSize] = useState(window.innerWidth)
+    useEffect(() => {
+      const handleResize = () => {
+        setSize(window.innerWidth)
+      }
+      window.addEventListener('resize', handleResize);
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, [])
     return (
         <>
             <div className='relative h-[85vh]'>
                 <div className='absolute w-full bg-black/30 left-0 h-full z-10'>
-
                 </div>
                 <div className='z-20  flex absolute items-center justify-center md:justify-start w-full h-full md:ml-10 ml-0'>
-                    <div className='text-slate-100 md:text-start text-center md:text-5xl text-3xl font-semibold space-y-4 p-3'>
+                    <div className='text-slate-100 md:text-start md:text-5xl text-3xl text-center font-semibold space-y-4 p-3' style={{wordBreak: 'break-all'}}>
                         <Fade cascade triggerOnce={true}>
-                            <Fade cascade triggerOnce={true} duration={100} delay={100}>Discover Leyte </Fade>
-                            <Fade cascade triggerOnce={true} duration={100} delay={300}>Where Adventure Meets Tranquility</Fade>
+                            <Fade cascade={size > 768} triggerOnce={true} duration={100} delay={100}>Discover Leyte </Fade>
+                            <Fade cascade={size > 768} triggerOnce={true} duration={100} delay={300}> Where Adventure Meets Tranquility</Fade>
                         </Fade>
                         <Fade cascade triggerOnce={true} duration={100} delay={2000}>
                             <div className='flex md:justify-start justify-center'>
@@ -27,7 +36,6 @@ const Home = () => {
                                     <span className="relative z-10">EXPLORE</span>
                                 </button>
                             </div>
-
                         </Fade>
                     </div>
                 </div>
@@ -107,7 +115,6 @@ const Home = () => {
                     </div>
                 </form>
             </div> */}
-
         </>
     )
 }
