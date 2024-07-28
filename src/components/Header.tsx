@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import logo from '../assets/visitleyte.png';
 import logoWhite from '../assets/visit-leyte-white.png';
 import { useEffect, useState } from 'react'
-import { Bounce, Slide } from "react-awesome-reveal";
+import {  Slide } from "react-awesome-reveal";
 import { PiCaretDownBold } from "react-icons/pi";
 import { FaBars } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
