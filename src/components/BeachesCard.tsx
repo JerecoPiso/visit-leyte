@@ -1,24 +1,40 @@
 import { MdLocationOn } from "react-icons/md";
+
 type BeachesInfo = {
     name: String;
     photo: any;
     description: String;
 }
-const BeachesCard = ({ name, photo }: BeachesInfo) => {
+
+const BeachesCard = ({ name, photo, description }: BeachesInfo) => {
     return (
-        <div className="group group-hover hover:shadow-2xl rounded-md h-full md:w-[20em] w-full ">
-            <div className="flex flex-col shadow-2xl h-auto rounded-md">
-                <div className="relative overflow-hidden rounded-md">
-                    <div className="absolute bg-black-opacity  rounded-md h-full w-full flex flex-col-reverse z-20">
-                        <p className="ml-2 mb-3 bottom-0 flex items-center text-white ="><MdLocationOn size={23} color={'#ffffff'} /> <span className="ml-1 text-base font-light">Palompon, Leyte</span></p>
-                    </div>
-                    <img src={photo} alt="" className="group-hover:scale-125 group-hover:transform duration-1000 rounded-md h-[13em] w-full z-10" />
+        <div className="group md:w-[22em] w-full rounded-2xl overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 bg-white hover:-translate-y-1">
+            <div className="relative overflow-hidden">
+                <img
+                    src={photo}
+                    alt={`${name}`}
+                    className="group-hover:scale-110 transition-transform duration-700 h-[14em] w-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                <div className="absolute bottom-3 left-4 flex items-center gap-1">
+                    <MdLocationOn size={16} className='text-sky-300' />
+                    <span className="text-white/90 text-xs font-light">Palompon, Leyte</span>
                 </div>
-                <div className="p-4">
-                    <p className="text-base font-semibold text-slate-600">{name}</p>
+                <div className='absolute top-3 right-3'>
+                    <span className='bg-white/20 backdrop-blur-sm text-white text-xs px-3 py-1 rounded-full border border-white/30'>
+                        Beach
+                    </span>
                 </div>
+            </div>
+            <div className="p-5">
+                <h3 className="text-base font-bold text-slate-800">{name}</h3>
+                <p className="text-slate-500 text-sm mt-2 leading-relaxed line-clamp-2">{description}</p>
+                <button type="button" className="mt-4 text-sky-600 text-sm font-medium hover:text-sky-700 flex items-center gap-1 transition-colors">
+                    Explore <span>→</span>
+                </button>
             </div>
         </div>
     )
 }
+
 export default BeachesCard;

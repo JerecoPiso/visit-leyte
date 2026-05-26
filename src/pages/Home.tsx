@@ -8,114 +8,169 @@ import LatestUpdates from '../components/LatestUpdates';
 import mainpicture from '../assets/island3.jpg';
 import { useEffect, useState } from 'react'
 import { Fade, Slide } from 'react-awesome-reveal'
+import { Link } from 'react-router-dom';
+
+const stats = [
+  { value: '50+', label: 'Destinations' },
+  { value: '12', label: 'Festivals Yearly' },
+  { value: '1M+', label: 'Visitors Annually' },
+  { value: '100%', label: 'Natural Wonders' },
+];
+
 const Home = () => {
-    const [size, setSize] = useState(window.innerWidth)
-    useEffect(() => {
-      const handleResize = () => {
-        setSize(window.innerWidth)
-      }
-      window.addEventListener('resize', handleResize);
-      return () => {
-        window.removeEventListener('resize', handleResize);
-      };
-    }, [])
-    return (
-        <>
-            <div className='relative h-[85vh]'>
-                <div className='absolute w-full bg-black/30 left-0 h-full z-10'>
-                </div>
-                <div className='z-20  flex absolute items-center justify-center md:justify-start w-full h-full md:ml-10 ml-0'>
-                    <div className='text-slate-100 md:text-start md:text-5xl text-3xl text-center font-semibold space-y-4 p-3' style={{wordBreak: 'break-all'}}>
-                        <Fade cascade triggerOnce={true}>
-                            <Fade cascade={size > 768} triggerOnce={true} duration={100} delay={100}>Discover Leyte </Fade>
-                            <Fade cascade={size > 768} triggerOnce={true} duration={100} delay={300}> Where Adventure Meets Tranquility</Fade>
-                        </Fade>
-                        <Fade cascade triggerOnce={true} duration={100} delay={2000}>
-                            <div className='flex md:justify-start justify-center'>
-                                <button className="text-base relative flex h-[50px] w-40 items-center justify-center overflow-hidden bg-slate-100/10 text-white shadow-2xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-slate-100 hover:text-sky-600 before:duration-500 before:ease-out  hover:before:h-56 hover:before:w-56">
-                                    <span className="relative z-10">EXPLORE</span>
-                                </button>
-                            </div>
-                        </Fade>
-                    </div>
-                </div>
-                <img src={mainpicture} alt="San Juanico Bridge" className='h-[85vh] w-full' />
-            </div>
-            <div className='mb-8 '>
-                <p className='section-title'>TOP DESTINATION</p>
-                <hr className="w-12 h-[0.4em] mx-auto mt-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded"></hr>
-                <div className='flex flex-wrap justify-center w-full max-h-auto mt-16 lg:px-20 md:px-14 px-4 gap-8 min-h-[22em]'>
-                    <div className='md:flex-1'>
-                        <DestinationCard name={"McArthur Park"} delay={300} photo={mcarthur} place={"Brgy. Candahug Palo Leyte"} />
-                    </div>
-                    <div className='md:flex-1'>
-                        <DestinationCard name={"Kalanggaman Island"} delay={500} photo={kalanggaman} place={"Palompon Leyte"} />
-                    </div>
-                    <div className='md:flex-1'>
-                        <DestinationCard name={"San Juanico Bridge"} delay={700} photo={sanjuanico} place={"Leyte and Samar"} />
-                    </div>
-                </div>
-            </div>
-            <div className='grid grid-cols-2 items-center w-full mt-24 lg:px-20 md:px-14 px-4 gap-8'>
-                <div className="md:col-span-1 col-span-2">
-                    <Slide direction={'left'} triggerOnce={true}>
-                        <div className='relative  flex flex-col items-center justify-center'>
-                            <p className='text-3xl text-sky-600'>BEACHES</p>
-                            <p className='mt-3 text-lg text-center'>Discover the beauty of our pristine beaches, where golden sands meet crystal-clear waters for an unforgettable experience</p>
-                            <button type='button' className='hover-button mt-4 px-6 py-2 rounded-sm border border-sky-600 text-sky-600'>EXPLORE</button>
-                        </div>
-                    </Slide>
-                </div>
-                <div className="md:col-span-1 col-span-2">
-                    <Slide direction={'right'} triggerOnce={true}>
-                        <img src={whytravel} alt="" className='w-full h-[20em] rounded-sm' />
-                    </Slide>
-                </div>
-            </div>
-            <div className='grid grid-cols-2 items-center w-full mt-16 lg:px-20 md:px-14 px-4 gap-8'>
-                <div className="md:col-span-1 col-span-2">
-                    <Slide direction={'left'} triggerOnce={true}>
-                        <img src={landmarks} alt="" className='w-full h-[20em] rounded-sm' />
-                    </Slide>
-                </div>
-                <div className="md:col-span-1 col-span-2">
-                    <Slide direction={'right'} triggerOnce={true}>
-                        <div className='relative flex flex-col items-center justify-center'>
-                            <p className='text-3xl text-sky-600'>LANDMARKS</p>
-                            <p className='mt-3 text-lg text-center'>Join us in exploring our remarkable landmarks, each a testament to history and culture, offering unforgettable experiences for all who visit.</p>
-                            <button type='button' className='hover-button mt-4 px-6 py-2 rounded-sm border border-sky-600 text-sky-600'>EXPLORE</button>
-                        </div>
-                    </Slide>
-                </div>
-            </div>
-            <div>
-                <p className='section-title'>LATEST UPDATES</p>
-                <hr className="w-12 h-[0.4em] mx-auto mt-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded"></hr>
-                <div className='flex flex-wrap justify-center w-full max-h-auto mt-16 mb-8 lg:px-20 md:px-14 px-4 gap-8 min-h-[20em]'>
-                    <div className="md:flex-1">
-                        <LatestUpdates title={'Leyte Gulf Landing'} photo={mcarthur} delay={300} description={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla nihil voluptas reprehenderit asperiores sunt quo labore, sequi obcaecati accusamus."} />
-                    </div>
-                    <div className="md:flex-1">
-                        <LatestUpdates title={'Leyte Gulf Landing'} photo={mcarthur} delay={500} description={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla nihil voluptas reprehenderit asperiores sunt quo labore, sequi obcaecati accusamus."} />
-                    </div>
-                    <div className="md:flex-1">
-                        <LatestUpdates title={'Leyte Gulf Landing'} photo={mcarthur} delay={700} description={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla nihil voluptas reprehenderit asperiores sunt quo labore, sequi obcaecati accusamus."} />
-                    </div>
-                </div>
-            </div>
-            {/* <div className='relative w-full h-[25em] mt-16'>
-                <img src={beach} alt="" className='absolute w-full h-[25em]' />
-                <form className='flex items-center absolute h-full bg-black/15 w-full left-auto pl-20'>
-                    <div className='w-[40em]'>
-                        <label htmlFor="email" className='text-white text-2xl '>EMAIL US FOR INQUIRIES</label>
-                        <div className='flex gap-2'>
-                            <input type="text" id='email' placeholder='Enter you email . . .' className='w-full placeholder:text-white block bg-transparent border border-white text-white focus:outline-none focus:ring-transparent focus:border-white' />
-                            <button type='submit' className='px-4 py-2 bg-sky-600 text-white'>SUBMIT</button>
-                        </div>
-                    </div>
-                </form>
-            </div> */}
-        </>
-    )
+  const [size, setSize] = useState(window.innerWidth)
+  useEffect(() => {
+    const handleResize = () => setSize(window.innerWidth)
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [])
+
+  return (
+    <>
+      {/* Hero */}
+      <div className='relative h-screen min-h-[600px]'>
+        <div className='hero-gradient absolute inset-0 z-10' />
+        <div className='z-20 absolute inset-0 flex flex-col items-center md:items-start justify-end md:justify-center px-6 md:px-20 pb-20 md:pb-0'>
+          <Fade cascade triggerOnce={true}>
+            <span className='text-sky-300 text-sm font-semibold tracking-[0.3em] uppercase mb-3 block'>
+              Welcome to Leyte
+            </span>
+            <h1 className='text-white text-4xl md:text-6xl lg:text-7xl font-bold leading-tight max-w-2xl'>
+              <Fade cascade={size > 768} triggerOnce={true} duration={80} delay={100}>
+                Discover Leyte
+              </Fade>
+              <br />
+              <span className='text-sky-300'>
+                <Fade cascade={size > 768} triggerOnce={true} duration={80} delay={300}>
+                  Where Adventure
+                </Fade>
+              </span>
+              <br />
+              <Fade cascade={size > 768} triggerOnce={true} duration={80} delay={500}>
+                Meets Tranquility
+              </Fade>
+            </h1>
+            <Fade triggerOnce={true} delay={1500}>
+              <p className='text-slate-300 mt-4 text-base max-w-md leading-relaxed'>
+                Explore pristine beaches, historic landmarks, and vibrant culture in the heart of the Philippines.
+              </p>
+              <div className='flex gap-4 mt-8'>
+                <button className="btn-primary text-base px-8 py-3">
+                  Explore Now
+                </button>
+                <button className="px-8 py-3 border border-white/40 text-white text-base font-medium rounded-full hover:bg-white/10 transition-all duration-300">
+                  Learn More
+                </button>
+              </div>
+            </Fade>
+          </Fade>
+        </div>
+        <img src={mainpicture} alt="Leyte Island" className='h-full w-full object-cover' />
+      </div>
+
+      {/* Stats bar */}
+      <div className='bg-gradient-to-r from-sky-600 to-blue-700 py-8 px-6'>
+        <div className='max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6'>
+          {stats.map((stat, i) => (
+            <Fade key={i} triggerOnce={true} delay={i * 100}>
+              <div className='text-center text-white'>
+                <p className='text-3xl font-bold'>{stat.value}</p>
+                <p className='text-sky-200 text-sm mt-1 tracking-wide'>{stat.label}</p>
+              </div>
+            </Fade>
+          ))}
+        </div>
+      </div>
+
+      {/* Top Destinations */}
+      <section className='py-20 bg-slate-50'>
+        <p className='section-title'>Top Destinations</p>
+        <div className='section-divider' />
+        <p className='section-subtitle'>Handpicked places that define the beauty and soul of Leyte</p>
+        <div className='flex flex-wrap justify-center w-full mt-12 lg:px-20 md:px-14 px-4 gap-6'>
+          <div className='md:flex-1 min-w-[260px] h-[22em]'>
+            <DestinationCard name={"McArthur Park"} delay={200} photo={mcarthur} place={"Brgy. Candahug, Palo Leyte"} />
+          </div>
+          <div className='md:flex-1 min-w-[260px] h-[22em]'>
+            <DestinationCard name={"Kalanggaman Island"} delay={350} photo={kalanggaman} place={"Palompon, Leyte"} />
+          </div>
+          <div className='md:flex-1 min-w-[260px] h-[22em]'>
+            <DestinationCard name={"San Juanico Bridge"} delay={500} photo={sanjuanico} place={"Leyte and Samar"} />
+          </div>
+        </div>
+      </section>
+
+      {/* Beaches promo */}
+      <section className='py-20 lg:px-20 md:px-14 px-6'>
+        <div className='grid grid-cols-2 items-center gap-12'>
+          <div className="md:col-span-1 col-span-2">
+            <Slide direction='left' triggerOnce={true}>
+              <span className='text-sky-500 text-sm font-semibold tracking-widest uppercase'>Explore</span>
+              <h2 className='text-4xl font-bold text-slate-800 mt-2 leading-tight'>Beautiful<br />Beaches</h2>
+              <p className='mt-4 text-slate-500 text-base leading-relaxed max-w-sm'>
+                Discover pristine beaches where golden sands meet crystal-clear waters for an unforgettable tropical escape.
+              </p>
+              <div className='flex gap-3 mt-6'>
+                <Link to='/beaches' className='btn-primary'>Explore Beaches</Link>
+              </div>
+            </Slide>
+          </div>
+          <div className="md:col-span-1 col-span-2">
+            <Slide direction='right' triggerOnce={true}>
+              <div className='relative'>
+                <img src={whytravel} alt="Beaches" className='w-full h-[24em] object-cover rounded-2xl shadow-xl' />
+                <div className='absolute inset-0 rounded-2xl bg-gradient-to-t from-sky-900/20 to-transparent' />
+              </div>
+            </Slide>
+          </div>
+        </div>
+      </section>
+
+      {/* Landmarks promo */}
+      <section className='py-20 lg:px-20 md:px-14 px-6 bg-slate-50'>
+        <div className='grid grid-cols-2 items-center gap-12'>
+          <div className="md:col-span-1 col-span-2 order-2 md:order-1">
+            <Slide direction='left' triggerOnce={true}>
+              <div className='relative'>
+                <img src={landmarks} alt="Landmarks" className='w-full h-[24em] object-cover rounded-2xl shadow-xl' />
+                <div className='absolute inset-0 rounded-2xl bg-gradient-to-t from-slate-900/20 to-transparent' />
+              </div>
+            </Slide>
+          </div>
+          <div className="md:col-span-1 col-span-2 order-1 md:order-2">
+            <Slide direction='right' triggerOnce={true}>
+              <span className='text-sky-500 text-sm font-semibold tracking-widest uppercase'>Discover</span>
+              <h2 className='text-4xl font-bold text-slate-800 mt-2 leading-tight'>Historic<br />Landmarks</h2>
+              <p className='mt-4 text-slate-500 text-base leading-relaxed max-w-sm'>
+                Walk through history and culture at Leyte's remarkable landmarks, each telling a story of resilience and heritage.
+              </p>
+              <div className='flex gap-3 mt-6'>
+                <Link to='/landmarks' className='btn-primary'>Explore Landmarks</Link>
+              </div>
+            </Slide>
+          </div>
+        </div>
+      </section>
+
+      {/* Latest Updates */}
+      <section className='py-20'>
+        <p className='section-title'>Latest Updates</p>
+        <div className='section-divider' />
+        <p className='section-subtitle'>Stay informed with the latest news, events, and stories from Leyte</p>
+        <div className='flex flex-wrap justify-center w-full mt-12 mb-8 lg:px-20 md:px-14 px-6 gap-6'>
+          <div className="md:flex-1 min-w-[260px]">
+            <LatestUpdates title={'Leyte Gulf Landing'} photo={mcarthur} delay={200} description={"Join us as we commemorate the historic Leyte Gulf Landing, a pivotal moment in Philippine and World War II history."} />
+          </div>
+          <div className="md:flex-1 min-w-[260px]">
+            <LatestUpdates title={'Pintados Festival'} photo={kalanggaman} delay={350} description={"Experience the vibrant colors and cultural pride of the Pintados-Kasadyaan Festival, celebrating Leyte's rich heritage."} />
+          </div>
+          <div className="md:flex-1 min-w-[260px]">
+            <LatestUpdates title={'Island Adventures'} photo={sanjuanico} delay={500} description={"Discover new island hopping routes and adventure packages across Leyte's stunning coastal destinations."} />
+          </div>
+        </div>
+      </section>
+    </>
+  )
 }
+
 export default Home;
