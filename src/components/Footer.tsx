@@ -6,7 +6,7 @@ import logoWhite from '../assets/visitleyte-nobg.png';
 const Footer = () => {
     return (
         <footer className='bg-gradient-to-br from-slate-900 to-slate-800'>
-            <div className='md:px-16 px-6 pt-14 pb-8'>
+            <div className='md:px-20 px-6 pt-14 pb-8'>
                 <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-10 pb-10'>
                     {/* Brand */}
                     <div className="col-span-1">
