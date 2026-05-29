@@ -55,7 +55,7 @@ const Header = () => {
       )}
 
       {/* Main navbar */}
-      <nav className={`z-30 flex justify-between items-center px-5 py-12 md:px-12 h-22 md:h-16 fixed top-0 w-full transition-all duration-300 ${
+      <nav className={`z-30 flex justify-between items-center px-5 py-2 md:py-12 md:px-12 h-auto md:h-16 fixed top-0 w-full transition-all duration-300 ${
         scrolled || !isHome
           ? 'bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100'
           : 'bg-transparent'
@@ -66,7 +66,7 @@ const Header = () => {
           <img
             src={isTransparent ? logoWhite : logo}
             alt="Visit Leyte"
-            className="h-18 md:h-20 w-auto object-contain"
+            className="h-12 md:h-20 w-auto object-contain ml-6"
           />
         </Link>
 
