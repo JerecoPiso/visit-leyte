@@ -1,10 +1,8 @@
 import BeachesCard from "../components/BeachesCard";
-import mainpicture from '../assets/island3.jpg';
+import { beaches } from "../data/beaches";
 import { Fade } from 'react-awesome-reveal';
 
 const Beaches = () => {
-    const desc = "Kalanggaman Island is a sandbar located in the sea between Leyte and Cebu, in the Visayas Archipelago of the Philippines. It is located 10 kilometres west from the municipality of Palompon, Leyte."
-
     return (
         <div className="pt-28 pb-20">
             {/* Page header */}
@@ -17,9 +15,9 @@ const Beaches = () => {
 
             <Fade cascade triggerOnce={true} damping={0.1}>
                 <div className="flex flex-wrap justify-center w-full gap-6 lg:px-16 md:px-10 px-4">
-                    {[...Array(6)].map((_, i) => (
-                        <div key={i} className="md:w-auto w-full">
-                            <BeachesCard name={"KALANGGAMAN ISLAND"} photo={mainpicture} description={desc} />
+                    {beaches.map((beach) => (
+                        <div key={beach.id} className="md:w-auto w-full">
+                            <BeachesCard id={beach.id} name={beach.name} photo={beach.photo} description={beach.description} location={beach.location} />
                         </div>
                     ))}
                 </div>

@@ -6,9 +6,12 @@ import kalanggaman from '../assets/KALANGGAMAN.jpg';
 import DestinationCard from '../components/DestinationCard';
 import LatestUpdates from '../components/LatestUpdates';
 import mainpicture from '../assets/island3.jpg';
+import { blogPosts } from '../data/blog';
 import { useEffect, useState } from 'react'
 import { Fade, Slide } from 'react-awesome-reveal'
 import { Link } from 'react-router-dom';
+
+const latestPosts = blogPosts.slice(0, 3);
 
 const stats = [
   { value: '50+', label: 'Destinations' },
@@ -158,15 +161,22 @@ const Home = () => {
         <div className='section-divider' />
         <p className='section-subtitle'>Stay informed with the latest news, events, and stories from Leyte</p>
         <div className='flex flex-wrap justify-center w-full mt-12 mb-8 lg:px-20 md:px-14 px-6 gap-6'>
-          <div className="md:flex-1 min-w-[260px]">
-            <LatestUpdates title={'Leyte Gulf Landing'} photo={mcarthur} delay={200} description={"Join us as we commemorate the historic Leyte Gulf Landing, a pivotal moment in Philippine and World War II history."} />
-          </div>
-          <div className="md:flex-1 min-w-[260px]">
-            <LatestUpdates title={'Pintados Festival'} photo={kalanggaman} delay={350} description={"Experience the vibrant colors and cultural pride of the Pintados-Kasadyaan Festival, celebrating Leyte's rich heritage."} />
-          </div>
-          <div className="md:flex-1 min-w-[260px]">
-            <LatestUpdates title={'Island Adventures'} photo={sanjuanico} delay={500} description={"Discover new island hopping routes and adventure packages across Leyte's stunning coastal destinations."} />
-          </div>
+          {latestPosts.map((post, i) => (
+            <div key={post.id} className="md:flex-1 min-w-[260px]">
+              <LatestUpdates
+                id={post.id}
+                title={post.title}
+                photo={post.photo}
+                delay={200 + i * 150}
+                description={post.excerpt}
+                date={post.date}
+                category={post.category}
+              />
+            </div>
+          ))}
+        </div>
+        <div className='flex justify-center mt-4'>
+          <Link to='/blog' className='btn-outline'>View All Stories</Link>
         </div>
       </section>
     </>

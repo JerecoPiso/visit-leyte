@@ -1,10 +1,8 @@
 import LandmarksCard from "../components/LandmarksCard"
-import mcarthur from '../assets/MCARTHUR.jpg';
+import { landmarks } from "../data/landmarks";
 import { Fade } from 'react-awesome-reveal';
 
 const Landmarks = () => {
-    const desc = "MacArthur Park commemorates General Douglas MacArthur's historic landing on the shores of Palo, Leyte — a pivotal moment that turned the tide of World War II in the Pacific. The park features iconic statues and monuments that draw visitors from around the world."
-
     return (
         <div className="pt-28 pb-20">
             {/* Page header */}
@@ -17,9 +15,9 @@ const Landmarks = () => {
 
             <Fade cascade triggerOnce={true} damping={0.1}>
                 <div className="flex flex-wrap justify-center w-full gap-6 lg:px-16 md:px-10 px-4">
-                    {[...Array(6)].map((_, i) => (
-                        <div key={i} className="md:w-auto w-full">
-                            <LandmarksCard name={"McArthur Park"} photo={mcarthur} description={desc} />
+                    {landmarks.map((landmark) => (
+                        <div key={landmark.id} className="md:w-auto w-full">
+                            <LandmarksCard id={landmark.id} name={landmark.name} photo={landmark.photo} description={landmark.description} location={landmark.location} />
                         </div>
                     ))}
                 </div>
